@@ -1,211 +1,49 @@
+"use client";
+
 import React from "react";
-import Header from "../components/Header";
-<Header/>
-const filters = [
-  {
-    category: "Store",
-    options: ["Sports Bras", "Jackets", "Pants & Tights", "Socks", "Shoes"],
-  },
-  {
-    category: "Gender",
-    options: ["Men", "Women", "Kids"],
-  },
-  {
-    category: "Price",
-    options: ["Under ₹2,000", "₹2,000 & up"],
-  },
-];
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
+import { add } from "../redux/cartslice";
 
 const products = [
-  {
-    image: "/Rectangle.png",
-    title: "Nike Air Force 1",
-    price: "₹8,995",
-    description: "Classic sneakers for everyday wear.",
-  },
-  {
-    image: "/Rectangle (1).png",
-    title: "Nike Pegasus Trail 3",
-    price: "₹10,995",
-    description: "Trail running shoes with comfort.",
-  },
-  {
-    image: "/Rectangle (2).png",
-    title: "Nike Yoga Tank",
-    price: "₹2,995",
-    description: "Perfect yoga wear for workouts.",
-  },
-  {
-    image: "/Image (1).png",
-    title: "Nike ZoomX Invincible",
-    price: "₹15,995",
-    description: "High-performance running shoes.",
-  },
-  {
-    image: "/Image (3).png",
-    title: "Nike Pro Dri-FIT",
-    price: "₹1,995",
-    description: "Comfortable training wear.",
-  },
-  {
-    image: "/Rectangle (3).png",
-    title: "Nike Air Max 90",
-    price: "₹12,995",
-    description: "A timeless classic.",
-  },
-  {
-    image: "/Rectangle (4).png",
-    title: "Nike Sports Skirt",
-    price: "₹4,995",
-    description: "Lightweight and comfortable.",
-  },
-  {
-    image: "/Rectangle (5).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
-  {
-    image: "/Rectangle (6).png",
-    title: "Nike Air Max 90",
-    price: "₹12,995",
-    description: "A timeless classic.",
-  },
-  {
-    image: "/Rectangle (7).png",
-    title: "Nike Sports Skirt",
-    price: "₹4,995",
-    description: "Lightweight and comfortable.",
-  },
-  {
-    image: "/Rectangle (8).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
-  {
-    image: "/Rectangle (9).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
-  {
-    image: "/Rectangle.png",
-    title: "Nike Air Force 1",
-    price: "₹8,995",
-    description: "Classic sneakers for everyday wear.",
-  },
-  {
-    image: "/Rectangle (1).png",
-    title: "Nike Pegasus Trail 3",
-    price: "₹10,995",
-    description: "Trail running shoes with comfort.",
-  },
-  {
-    image: "/Rectangle (2).png",
-    title: "Nike Yoga Tank",
-    price: "₹2,995",
-    description: "Perfect yoga wear for workouts.",
-  },
-  {
-    image: "/Image (1).png",
-    title: "Nike ZoomX Invincible",
-    price: "₹15,995",
-    description: "High-performance running shoes.",
-  },
-  {
-    image: "/Image (3).png",
-    title: "Nike Pro Dri-FIT",
-    price: "₹1,995",
-    description: "Comfortable training wear.",
-  },
-  {
-    image: "/Rectangle (3).png",
-    title: "Nike Air Max 90",
-    price: "₹12,995",
-    description: "A timeless classic.",
-  },
-  {
-    image: "/Rectangle (4).png",
-    title: "Nike Sports Skirt",
-    price: "₹4,995",
-    description: "Lightweight and comfortable.",
-  },
-  {
-    image: "/Rectangle (5).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
-  {
-    image: "/Rectangle (6).png",
-    title: "Nike Air Max 90",
-    price: "₹12,995",
-    description: "A timeless classic.",
-  },
-  {
-    image: "/Rectangle (7).png",
-    title: "Nike Sports Skirt",
-    price: "₹4,995",
-    description: "Lightweight and comfortable.",
-  },
-  {
-    image: "/Rectangle (8).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
-  {
-    image: "/Rectangle (9).png",
-    title: "Nike Dunk Low",
-    price: "₹8,495",
-    description: "Iconic basketball shoes.",
-  },
+  { id: 1, image: "/Image (1).png", title: "Nike Air Force", price: 6995, description: "Classic sneakers for everyday wear." },
+  { id: 2, image: "/Image (10).png", title: "Nike Pegasus Trail", price: 9995, description: "Trail running shoes with comfort." },
+  { id: 3, image: "/Rectangle (3).png", title: "Nike Yoga Wear", price: 4995, description: "Perfect yoga wear for workouts." },
+  { id: 4, image: "/Rectangle (4).png", title: "Nike Zoom Indestruct", price: 8995, description: "High-performance running shoes." },
+  { id: 5, image: "/Rectangle (5).png", title: "Nike Metcon", price: 10995, description: "Comfortable training wear." },
+  { id: 6, image: "/Rectangle (6).png", title: "Nike Zoom Indestruct", price: 8995, description: "High-performance running shoes." },
 ];
 
-const Products: React.FC = () => {
-  return (
-    <div className="bg-white min-h-screen flex">
-      {/* Sidebar */}
-      <aside className=" md:block w-1/4 bg-white p-4">
-        {filters.map((filter, index) => (
-          <div key={index} className="mb-6">
-            <h2 className="text-lg font-bold mb-2">{filter.category}</h2>
-            <ul className="space-y-2">
-              {filter.options.map((option, i) => (
-                <li
-                  key={i}
-                  className="text-gray-700 hover:underline cursor-pointer"
-                >
-                  {option}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </aside>
+const ProductPage: React.FC = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
 
-      {/* Product Grid */}
-      <main className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4">
-        {products.map((product, index) => (
-          <div
-            key={index}
-            className="bg-white p-4 shadow rounded hover:shadow-lg transition-shadow"
-          >
-            <img
-              src={product.image}
-              alt={product.title}
-              className="h-48 w-full object-cover rounded"
-            />
-            <h3 className="mt-2 text-lg font-normal">{product.title}</h3>
-            <p className="text-sm text-gray-600">{product.description}</p>
-            <p className="font-bold mt-1">{product.price}</p>
+  const handleAddToCart = (product: any) => {
+    dispatch(add(product));
+    router.push("/cart");
+  };
+
+  return (
+    <div className="bg-white min-h-screen p-6">
+      <h1 className="text-2xl font-bold mb-6">Products</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <div key={product.id} className="border rounded-lg shadow-sm hover:shadow-lg p-4">
+            <img src={product.image} alt={product.title} className="w-full h-48 object-cover rounded-t-lg" />
+            <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
+            <p className="text-gray-600 mt-1">{product.description}</p>
+            <p className="text-blue-500 font-bold mt-1">₹{product.price}</p>
+            <button
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              onClick={() => handleAddToCart(product)}
+            >
+              Add to Cart
+            </button>
           </div>
         ))}
-      </main>
+      </div>
     </div>
   );
 };
 
-export default Products;
-
+export default ProductPage;

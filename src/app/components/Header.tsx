@@ -4,11 +4,17 @@ import Image from 'next/image';
 import jordan from '../../../public/Vector.png';
 import nike from '../../../public/Vector (1).png';
 import Link from 'next/link';
-
+import {useSelector} from 'react-redux'
+import {RootState} from '../redux/store'
+import { FiShoppingCart, FiUser, FiMenu, FiX, FiSearch } from "react-icons/fi";
 export default function Header() {
+
+const item = useSelector((state:RootState) => state.cart)
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
 
   return (
     <header className="bg-white shadow-md">
@@ -65,8 +71,8 @@ export default function Header() {
       >
         {/* Logo */}
 <Link href="/">
-        <div className="flex justify-between items-center py-3 sm:py-0">
-          <Image src={nike} alt="Nike Logo" className="w-32 sm:w-44" />
+        <div className="flex justify-between items-center py-3 w-12 sm:py-0">
+          <Image src={nike} alt="Nike Logo" className="w-12 sm:w-12" />
         </div>
         </Link>
         {/* Navigation Links */}
@@ -114,10 +120,12 @@ export default function Header() {
             />
           </div>
         </div>
+        <Link href="/cart"><FiShoppingCart className="text-2xl cursor-pointer mr-2" /></Link>
+        {item.length}
+        <FiUser className="text-2xl cursor-pointer" />
       </div>
     </header>
   );
 }
-
 
 

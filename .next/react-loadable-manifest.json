@@ -1,0 +1,85 @@
+{
+  "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> ./_chunks-es/stegaEncodeSourceMap.js": {
+    "id": 13139,
+    "files": [
+      "static/chunks/139.b895e0af1f2772d7.js"
+    ]
+  },
+  "..\\node_modules\\@sanity\\client\\dist\\index.browser.js -> @sanity/eventsource": {
+    "id": 46247,
+    "files": [
+      "static/chunks/247.95e0addaa457f6ba.js"
+    ]
+  },
+  "..\\node_modules\\@sanity\\vision\\lib\\_chunks-es\\index.mjs -> ./SanityVision.mjs": {
+    "id": 76213,
+    "files": [
+      "static/chunks/363642f4.a37b44349a35f878.js",
+      "static/chunks/194.051ea0980700578c.js"
+    ]
+  },
+  "..\\node_modules\\@sanity\\vision\\lib\\_chunks-es\\index.mjs -> ./resources.mjs": {
+    "id": 53703,
+    "files": [
+      "static/chunks/703.f216c46dbe16a9d3.js"
+    ]
+  },
+  "..\\node_modules\\next-sanity\\dist\\studio\\client-component.js -> ../_chunks-es/NextStudio.js": {
+    "id": 34398,
+    "files": [
+      "static/chunks/398.32caed0f664f6023.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\_chunks-es\\index3.mjs -> ./index.mjs": {
+    "id": 40496,
+    "files": [
+      "static/chunks/496.b19972caf99f690b.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\_chunks-es\\index3.mjs -> ./index2.mjs": {
+    "id": 36790,
+    "files": [
+      "static/chunks/790.31614967d3f5087b.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\_chunks-es\\index3.mjs -> ./pane.mjs": {
+    "id": 7347,
+    "files": []
+  },
+  "..\\node_modules\\sanity\\lib\\_chunks-es\\pane.mjs -> ./index3.mjs": {
+    "id": 59845,
+    "files": [
+      "static/chunks/845.a2fcfc2d9cd39f6b.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\_chunks-es\\pane.mjs -> ./resources4.mjs": {
+    "id": 86640,
+    "files": [
+      "static/chunks/640.689c14834c10c906.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\index.mjs -> ./_chunks-es/ViteDevServerStopped.mjs": {
+    "id": 84857,
+    "files": [
+      "static/chunks/857.1e6016fc776f79d4.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\index.mjs -> ./_chunks-es/resources.mjs": {
+    "id": 53370,
+    "files": [
+      "static/chunks/370.a630fc2dd8712908.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\index.mjs -> ./_chunks-es/resources2.mjs": {
+    "id": 5508,
+    "files": [
+      "static/chunks/508.e799dc61bfc704ca.js"
+    ]
+  },
+  "..\\node_modules\\sanity\\lib\\index.mjs -> ./_chunks-es/resources3.mjs": {
+    "id": 60238,
+    "files": [
+      "static/chunks/238.799a334fdf9cec27.js"
+    ]
+  }
+}
