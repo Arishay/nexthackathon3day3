@@ -65,6 +65,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface User {
   email: string;
   password: string;
+  name? : string;
 }
 
 interface AuthState {
