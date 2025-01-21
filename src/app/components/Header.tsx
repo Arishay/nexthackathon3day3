@@ -122,7 +122,11 @@ const item = useSelector((state:RootState) => state.cart)
         </div>
         <Link href="/cart"><FiShoppingCart className="text-2xl cursor-pointer mr-2" /></Link>
         {item.length}
-        <FiUser className="text-2xl cursor-pointer" />
+
+        <Link href="/login">
+          <FiUser className="text-2xl cursor-pointer" />
+        </Link>
+        
       </div>
     </header>
   );
