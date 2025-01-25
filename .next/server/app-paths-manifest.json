@@ -1,7 +1,8 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
   "/Products/page": "app/Products/page.js",
-  "/login/page": "app/login/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/studio/[[...tool]]/page": "app/studio/[[...tool]]/page.js",
+  "/Products/[id]/page": "app/Products/[id]/page.js",
+  "/cart/page": "app/cart/page.js",
+  "/order-success/page": "app/order-success/page.js"
 }
